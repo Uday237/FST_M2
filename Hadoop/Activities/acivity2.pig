@@ -1,5 +1,5 @@
 -- Load input file from HDFS
-inputFile = LOAD 'hdfs:///user/hemant/input.txt' AS (line:chararray);
+inputFile = LOAD 'hdfs:///user/Uday/input.txt' AS (line:chararray);
 -- Tokeize each word in the file (Map)
 words = FOREACH inputFile GENERATE FLATTEN(TOKENIZE(line)) AS word;
 -- Combine the words from the above stage
